@@ -282,3 +282,20 @@ def make_bricks(small, big, goal):
         break
   else:
     return False
+
+    
+#Given 3 int values, a b c, return their sum. However, if one of the values is the same as another of the values, it does not count towards the sum.
+def lone_sum(a, b, c):
+  if a != b and b != c and a != c:
+    sum = a + b + c
+    return sum
+  elif a == b and b != c and a != c:
+    sum = c
+    return sum
+  elif b == c and a != b and a != c:
+    sum = a
+    return sum
+  elif a == b and b == c and a == c:
+    return 0
+  elif a == c and b != a and b != c:
+    return b
