@@ -264,6 +264,7 @@ def make_bricks(small, big, goal):
     return True
   elif (big-1) * 5 + small == goal:
     return True
+  elif (big-1) *5 + small > goal:
     while big >= 0:
       big = big -1
       if big*5 + small == goal:
@@ -272,6 +273,7 @@ def make_bricks(small, big, goal):
         break
   elif big*5 + small == goal:
     return True
+  elif big*5 + small > goal:
     while small > 0:
       small = small -1
       if big*5 + small == goal:
