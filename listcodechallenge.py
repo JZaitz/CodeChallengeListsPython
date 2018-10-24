@@ -294,3 +294,23 @@ def lone_sum(a, b, c):
     return 0
   elif a == c and b != a and b != c:
     return b
+
+#Given a string, return a string where for every char in the original, there are two chars.
+def double_char(str):
+  newstr = ""
+  for c in str:
+    newstr = newstr + c*2
+  return newstr
+
+
+#Return the number of times that the string "hi" appears anywhere in the given string.
+def count_hi(str):
+  counter = 0
+  for i in range(0,len(str)-1):
+    if str[i] == "h" and str[i+1] == "i":
+      counter = counter + 1
+    elif str[i:i+2] == "hi":
+      counter = counter + 1
+    else:
+      return 0
+  return counter
