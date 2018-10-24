@@ -313,6 +313,23 @@ def count_hi(str):
       counter = counter + 1
   return counter
 
+
+ """
+ #RUBY TRANSLATION
+def count_hi(str)
+  counter = 0
+  for i in 0..str.length -2
+    if str[i] == "h" && str[i+1] == "i"
+      counter += 1
+    elsif str[i..i+1] == "hi"
+      counter += 1
+    end
+  end
+  counter
+
+end
+"""
+
  #Return True if the string "cat" and "dog" appear the same number of times in the given string.
  def cat_dog(str):
   ccount = 0
