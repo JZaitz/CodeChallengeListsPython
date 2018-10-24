@@ -314,3 +314,17 @@ def count_hi(str):
     else:
       return 0
   return counter
+
+ #Return True if the string "cat" and "dog" appear the same number of times in the given string.
+ def cat_dog(str):
+  ccount = 0
+  dcount = 0
+  for i in range(0, len(str) - 2):
+    if str[i:i+3] == "cat":
+      ccount = ccount + 1
+    elif str[i:i+3] == "dog":
+      dcount = dcount + 1
+  if ccount == dcount:
+    return True
+  elif ccount != dcount:
+    return False
