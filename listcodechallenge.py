@@ -249,6 +249,19 @@ def close_far(a, b, c):
   else:
     return False
 
+"""RUBY TRANSLATION
+
+def close_far(a,b,c)
+  if (a-b).abs <= 1 && (a-c).abs >= 2 || (a-c).abs <= 1 && (a-b).abs >= 2
+    return True
+  else 
+    return False
+  end
+end
+
+
+"""
+
 #We want to make a row of bricks that is goal inches long. We have a number of small bricks (1 inch each) and big bricks (5 inches each). Return True if it is possible to make the goal by choosing from the given bricks. This is a little harder than it looks and can be done without any loops.
 def make_bricks(small, big, goal):
   if big*5 + small == goal:
