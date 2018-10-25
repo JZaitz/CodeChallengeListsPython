@@ -387,3 +387,21 @@ def count_code(str):
     elif str[i] == "c" and str[i+1] == "o" and str[i+3] == "e":
       counter = counter + 1
   return counter
+
+  """RUBY TRANSLATION
+def count_code(str)
+  counter = 0
+  for i in 0..str.length-4
+    if str[i..i+1] == "co" && str[i+3] == "e"
+      counter += 1
+    elsif str[i] == "c" && str[i+1] == "o" && str[i+3] == "e"
+      counter += 1
+    end
+  return counter
+  end
+
+
+end
+
+
+  """
