@@ -361,12 +361,12 @@ end
 def cat_dog(str)
   ccount = 0
   dcount = 0
-  for i in 0..str.length-4
+  for i in 0..str.length-3
     if str[i..i+2] == "cat"
       ccount += 1
     elsif str[i:i+2] == "dog"
       dcount += 1
-    end 
+    end
     if ccount == dcount
       return True
     elsif ccount != dcount
