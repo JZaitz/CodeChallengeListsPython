@@ -254,7 +254,7 @@ def close_far(a, b, c):
 def close_far(a,b,c)
   if (a-b).abs <= 1 && (a-c).abs >= 2 || (a-c).abs <= 1 && (a-b).abs >= 2
     return True
-  else 
+  else
     return False
   end
 end
@@ -418,3 +418,29 @@ end
 
 
   """
+
+
+#Given two strings, return True if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be "case sensitive"). Note: s.lower() returns the lowercase version of a string.
+def end_other(a, b):
+  blength = len(b)
+  alength = len(a)
+  if a[(alength-blength):].lower() == b.lower():
+    return True
+  elif b[(blength-alength):].lower() == a.lower():
+    return True
+  else:
+    return False
+
+"""RUBY TRANSLATION
+def end_other(a,b)
+  blength = a.length 
+  alength = b.length
+  if a[(alength-blength)..alength-1].downcase == b.downcase
+    return True
+  elsif b[(blength-alength)..blength-1].downcase == a.downcase
+    return True
+  else
+    return False
+  end
+end
+"""
