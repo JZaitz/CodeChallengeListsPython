@@ -302,6 +302,19 @@ def double_char(str):
     newstr = newstr + c*2
   return newstr
 
+ """RUBY TRANSLATION
+def double_char(str)
+  newstr = ""
+  str.each_char do |c|
+    newstr = newstr + c * 2
+  end
+  newstr
+
+end
+
+
+ """
+
 
 #Return the number of times that the string "hi" appears anywhere in the given string.
 def count_hi(str):
