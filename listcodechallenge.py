@@ -433,7 +433,7 @@ def end_other(a, b):
 
 """RUBY TRANSLATION
 def end_other(a,b)
-  blength = a.length 
+  blength = a.length
   alength = b.length
   if a[(alength-blength)..alength-1].downcase == b.downcase
     return True
@@ -444,3 +444,16 @@ def end_other(a,b)
   end
 end
 """
+
+#Return True if the given string contains an appearance of "xyz" where the xyz is not directly preceeded by a period (.). So "xxyz" counts but "x.xyz" does not.
+def xyz_there(str):
+  counter = 0
+  if len(str) <= 2:
+    return False
+  else:
+    for i in range(0,len(str)-2):
+      if str[i-1] != "." and str[i:i+3] == "xyz" or str[i:] == "xyz" and str[i-1] != ".":
+        counter += 1
+        return True
+  if counter == 0:
+    return False
