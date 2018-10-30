@@ -506,8 +506,8 @@ def centered_average(nums)
   nums.sort
   newnums = nums[1:-2]
   summ = newnums.reduce(:+)
-  answer summ/newnums.length
-  return answer 
+  answer = summ/newnums.length
+  return answer
 end
 
  """
